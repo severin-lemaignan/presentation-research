@@ -80,7 +80,7 @@
 %--------------------------------------------------------------------------
 \title{\Large Socially-driven Autonomous Robots\newline for Real-World Human-Robot Interactions}
 \subtitle{~}
-\date{{\bf 10 Mar 2021}}
+\date{{\bf KTH seminar} | 06 Apr 2021}
 \author{Séverin Lemaignan}
 \institute{Bristol Robotics Lab\\{\bf University of the West of England}}
 
@@ -171,9 +171,11 @@
     %    with \emph{human oversight}?
 \end{frame}
 
-\begin{frame}<5>[label=mindmap,plain]
+{
+    \paper{Baxter, Lemaignan, Trafton {\bf Workshop on Cognitive Architectures for Social HRI} -- HRI 2016}
+\begin{frame}<5>[label=mindmap]
 \centering
-        \resizebox{!}{0.9\paperheight}{%
+        \resizebox{!}{0.8\paperheight}{%
             \begin{tikzpicture}[
                     >=latex,
                 every edge/.style={<-, draw, very thick}]
@@ -219,12 +221,16 @@
         \end{tikzpicture}
     }
 \end{frame}
+}
 
-\begin{frame}{What have we been up to over the last 3 years?}
-    \begin{center}
-        \includegraphics[width=\linewidth]{architectures/sota2021}
-    \end{center}
-\end{frame}
+%
+%\begin{frame}{What have we been up to over the last 3 years?}
+%    \begin{center}
+%        \includegraphics[width=\linewidth]{architectures/sota2021}
+%    \end{center}
+%\end{frame}
+
+\imageframe[scale=0.9]{figs/echos-big-picture}
 
 \section{Social situation assessment}
 
@@ -288,34 +294,38 @@ Benchmark for Socially-Aware Assistive Robots} HRI LBR 2020}
 %\imageframe[color=black]{social-interactions/social-interactions.pdf}
 
 {
-    \paper{Lemaignan et al. \textbf{The PInSoRo dataset: Supporting the data-driven study of child-child and child-robot [...]} PLOS One 2018]
+    \paper{Lemaignan et al. \textbf{The PInSoRo dataset: Supporting the
+    data-driven study of child-child and child-robot [...]} PLOS One 2018}
 
-    [Bartlett et al. \textbf{What Can You See? Identifying Cues on Internal States from the Kinematics [...]} FrontiersIn 2019}
 
 \begin{frame}{Deciphering internal state}
     \begin{columns}
         \begin{column}{0.5\linewidth}
-            \includegraphics[width=\columnwidth]{pinsoro/annotator.jpg}
+            \vspace{0.4cm}
+            \video{\columnwidth}{figs/pinsoro/annotations.mp4?autostart}
         \end{column}
         \begin{column}{0.5\linewidth}
-            \includegraphics[width=\columnwidth]{kinematics_social_dynamics/clip_skel_05_thumb.jpg}
+            \includegraphics[width=\columnwidth]{pinsoro/annotator.jpg}
+            %\includegraphics[width=\columnwidth]{kinematics_social_dynamics/clip_skel_05_thumb.jpg}
 
         \end{column}
     \end{columns}
-    \vspace{0.5cm}
+%    \vspace{0.5cm}
 \begin{columns}
     \begin{column}{0.5\linewidth}
         {\scriptsize
         \begin{itemize}
-            \item PInSoRo dataset: 45h+ and 2M frames of annotated natural interactions
-            \item new data analysis techniques to estimate internal state from body language
+            \item PInSoRo dataset: 45h+ and 2M frames of annotated natural
+                interactions. \url{freeplay-sandbox.github.io}
             \item first-in-kind dataset for data-driven study of social
                 interactions in robotics
+            \item new data analysis techniques to estimate internal state from body language
         \end{itemize}
         }
     \end{column}
     \begin{column}{0.5\linewidth}
-            \includegraphics[trim=1cm 0 4cm 0,clip,width=\columnwidth]{kinematics_social_dynamics/efa-embeddings.png}
+            %\includegraphics[trim=1cm 0 4cm 0,clip,width=\columnwidth]{kinematics_social_dynamics/efa-embeddings.png}
+            \includegraphics[width=\columnwidth]{pinsoro/coding-scheme}
     \end{column}
 \end{columns}
 
@@ -344,7 +354,7 @@ Benchmark for Socially-Aware Assistive Robots} HRI LBR 2020}
     \paper{Bartlett et al. \textbf{What Can You See? Identifying Cues on
 Internal States from the Kinematics [...]} FrontiersIn 2019}
 
-\begin{frame}<1>{EFA: Exploratory Factor Analysis}
+\begin{frame}{EFA: Exploratory Factor Analysis}
 
 \tiny
 \rowcolors{2}{gray!25}{white}
@@ -449,10 +459,167 @@ Internal States from the Kinematics [...]} FrontiersIn 2019}
 
 
 {
-    \paper{Senft et al. \textbf{Teaching robots social autonomy from in situ
-    human guidance} Science Robotics 2019]
+    \fullbackground[scale=0.9]{sparc/sparc-bg}
+\begin{frame}[plain]
+    \Large
+    Beyond the question of the practical integration of robots into the
+    classroom, how to address \textbf{teachers' acceptance}, and specifically, the \textbf{tension between robot autonomy and teacher
+    control}?
 
-    [Winkle et al. \textbf{In-Situ Learning from a Domain Expert for Real World Socially Assistive Robot Deployment} RSS 2020}
+\end{frame}
+}
+
+%\imageframe[caption={\textbf{Interactive Reinforcement Learning} to the rescue?}, color=black]{sparc/sophies}
+
+
+\begin{frame}{Autonomous robot, yet teacher in the loop?}
+
+    One experiment with:
+    
+    \begin{itemize}
+        \item<+-> a real robot
+        \item<+-> a real interaction (...with a human!)
+        \item<+-> a continuous interaction
+        \item<+-> a realistic task (large state vector \& action space)
+        \item<+-> also including social behaviours \& social dynamics
+    \end{itemize}
+
+\end{frame}
+
+{
+    \paper{Senft et al. \textbf{Teaching robots social autonomy from in situ
+    human guidance} Science Robotics 2019}
+
+\begin{frame}{Reinforcement learning applied to social robotics}
+
+    \begin{columns}
+        \begin{column}{0.5\linewidth}
+
+            \includegraphics[width=\linewidth]{sparc/overview}
+
+        \end{column}
+        \begin{column}{0.5\linewidth}
+            \includegraphics[width=\linewidth]{sparc/gui}
+        \end{column}
+    \end{columns}
+
+    The children plays a game about food chains; the robot learns to guide them
+    (\emph{task-specific action policy}) and encourage them (\emph{social action
+    policy})
+
+    Complex problem: 
+    $|state| = 210$ $| action\_space| = 655$
+
+    \badge[caption=Emmanuel Senft]{colleagues/emmanuel}
+\end{frame}
+
+\begin{frame}{Teacher's interface}
+    \begin{center}
+        \includegraphics[width=0.9\linewidth]{sparc/woz-gui}
+    \end{center}
+
+    The robot's teacher (an end-user: might be the actual child's teacher) has a
+    tablet interface that mirror's the child one, and add robot's teleoperation
+    and rewards.
+
+    \badge[caption=Emmanuel Senft]{colleagues/emmanuel}
+\end{frame}
+
+\videoframe[0.56]{figs/sparc/video.mp4?noaudio}
+
+%\begin{frame}{Software architecture}
+%    \begin{center}
+%        \includegraphics[width=\linewidth]{figs/sparc/architecture}
+%    \end{center}
+%    \badge[caption=Emmanuel Senft]{colleagues/emmanuel}
+%\end{frame}
+
+%\imageframe[caption={Overall performance (pre-, mid-, post-test)},scale=0.9]{sparc/perf}
+
+\begin{frame}{Learnt robot's behaviour}
+    \only<1-2>{
+        Distribution of actions for the 25 children participants:
+    }
+    \includegraphics<1>[width=0.9\linewidth]{sparc/actions-supervised}
+    \includegraphics<2>[width=0.9\linewidth]{sparc/actions}
+    \only<1-2>{
+        $\rightarrow$ the robot personalises its action policies to the child's
+        behaviour.
+    }
+
+
+    \only<3>{
+        Time between a child's successful action and a praise:
+
+        \includegraphics[width=0.9\linewidth]{sparc/social-timing}
+
+        $\rightarrow$ the robot has also learnt an appropriate 'social timing'.
+    }
+
+    \badge[caption=Emmanuel Senft]{colleagues/emmanuel}
+\end{frame}
+}
+
+
+%\imageframe[color=black,caption={$|state| = 210$ $| action\_space| = 655$}]{sparc/gui}
+%\imageframe[color=black]{sparc/overview}
+%\videoframe[0.56]{figs/sparc/video.mp4}
+%\imageframe[color=black]{sparc/woz-gui}
+%\imageframe[caption={Overall performance (pre-, mid-, post-test)},scale=0.9]{sparc/perf}
+%\imageframe[scale=0.9]{sparc/actions-supervised}
+%\imageframe[scale=0.9]{sparc/actions}
+%\imageframe[scale=0.9]{sparc/social-timing}
+
+\begin{frame}{What does that means for the expert/teacher/end-user?}
+
+    \begin{columns}
+        \begin{column}{0.45\linewidth}
+            
+            \begin{center}
+                \includegraphics[width=0.9\linewidth]{sparc/sparc}
+            \end{center}
+        \end{column}
+        \begin{column}{0.55\linewidth}
+            \only<1>{
+            \begin{itemize}
+                \item {\bf Progressively transferring autonomy}  demonstrably
+                    works in non-trivial tutoring scenarios
+
+                \item (it also learns some elements of {\bf social behaviours} and
+                    {\bf social timing})
+            \end{itemize}
+        }
+            \only<2>{
+                Key properties:
+
+            \begin{itemize}
+                \item \textbf{progressive autonomy} yet
+                    \textbf{transparency} of the behaviour;
+                \item \textbf{observability} and possibility to \textbf{take
+                    over};
+                \item because the training takes place in-situ, the
+                    robot behaviours are \textbf{co-constructed} by the
+                    teacher and the child
+            \end{itemize}
+        }
+            \only<3>{
+                Yet:
+
+            \begin{itemize}
+                \item Design of the input state tricky and largely task
+                    dependent;
+                \item What about more complex social behaviours?
+                \item Nothing yet on group dynamics
+            \end{itemize}
+            }
+        \end{column}
+    \end{columns}
+
+
+\end{frame}
+
+{
+    \paper{Winkle et al. \textbf{In-Situ Learning from a Domain Expert for Real World Socially Assistive Robot Deployment} RSS 2020}
 
 \begin{frame}{Expert-in-the-loop machine learning}
 
@@ -564,18 +731,7 @@ Internal States from the Kinematics [...]} FrontiersIn 2019}
     \end{columns}
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\begin{frame}{HUMAN FACTORS --- expertise}
-%
-%        \begin{tikzpicture}
-%            \node[rotate=90,text width=2.5cm]{\scriptsize\textbf{Understanding\\interaction}};
-%        \end{tikzpicture}
-%            \hyperlink{croquignole}{\includegraphics[height=0.2\paperheight]{trust/Tiago_and_participant}}
-%            \hspace{0.5em}
-%            \hyperlink{dominos}{\includegraphics[trim=10cm 0 4cm 0,clip,height=0.2\paperheight]{dynamic-language/Preview_image}}
-%
-%\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -793,6 +949,42 @@ Internal States from the Kinematics [...]} FrontiersIn 2019}
                     expert
             \end{itemize}
 \end{frame}
+
+{
+    \paper{Yang et al. \textbf{AppGAN: Generative Adversarial Networks for
+    Generating Robot Approach Behaviours [...]} RoMan 2019}
+
+\begin{frame}{Generative Adversarial Nets for behaviour generation}
+
+    Some of the most exciting recent work in using ML for robot behaviour
+    generation involve \textbf{Generative Adversarial Networks} (GANs):
+
+            \begin{center}
+                \includegraphics[width=0.6\linewidth]{figs/generation/fangkai-yang-appgan-traj.png}
+
+                \includegraphics[width=0.8\linewidth]{figs/generation/fangkai-yang-appgan.png}
+            \end{center}
+\end{frame}
+}
+
+\begin{frame}{Idea: a social-teleological architecture}
+
+\end{frame}
+
+\imageframe[color=white]{islands1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\imageframe[color=white]{islands2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\imageframe[color=white]{islands3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\imageframe[color=white]{islands4}
+
 
 \begin{frame}{Idea: long-term/short-term policy arbitration}
     \begin{center}

@@ -189,7 +189,7 @@
     \AddToShipoutPictureFG*{\includegraphics[width=\paperwidth]{background.pdf}}
     \begin{minipage}[b][\paperheight]{\textwidth}
     \vspace*{5mm}
-    \includegraphics[height=25mm]{logo}\par
+    \includegraphics[height=20mm]{logo}\par
     \vspace*{5mm}
     \ifx\insertsubtitle\@empty%
     \else%
@@ -406,12 +406,19 @@
 \newcommand\badge[2][]{%
     \pgfkeys{/background, default, #1}%
     \begin{tikzpicture}[remember picture,overlay]%
-        \node [xshift=-.4cm,yshift=-1.8cm,anchor=east] at (current page.north east){\includegraphics[height=2cm,keepaspectratio]{#2}};%
+        \node [xshift=-.3cm,yshift=-1.8cm,anchor=east] at (current page.north east) (badge) {\includegraphics[height=2cm,keepaspectratio]{#2}};%
+
+        \begin{pgfonlayer}{background}
+
+        \node [anchor=west,fill=hriWarmGreyDark,minimum size=2.2cm] at (badge) {};%
+        \node [anchor=center,fill=hriWarmGreyDark,minimum size=2.2cm,circle] at (badge) {};%
+
+        \end{pgfonlayer}
+
         \ifdefequal{\bgCaption}{\empty}{%
         }{%
-                \node [xshift=-.4cm,yshift=-3cm,anchor=east] at (current page.north east){\bf\tiny\bgCaption\par};%
-%                \node at (-1, -4.5) [anchor=south west,shape=rectangle,fill=hriSec3Dark, opacity=0.7, align=right, text width=0.6\paperwidth]
-%                {\usebeamerfont{subtitle}\usebeamercolor[bg]{subtitle}\bgCaption\par};
+                %\node [anchor=north, below=-0.1cm of badge] {\bf\tiny\bgCaption\par};%
+            \node [anchor=west, right=-0.17cm of badge] {\rotatebox{-90}{\bf\tiny\color{hriWarmGreyLight}{\bgCaption}\par}};%
         }%
     \end{tikzpicture}%
 }
