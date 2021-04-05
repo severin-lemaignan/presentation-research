@@ -82,7 +82,7 @@
 \subtitle{~}
 \date{{\bf KTH seminar} | 06 Apr 2021}
 \author{Séverin Lemaignan}
-\institute{Bristol Robotics Lab\\{\bf University of the West of England}}
+\institute{{\bf Bristol Robotics Lab}\\University of the West of England}
 
 %--------------------------------------------------------------------------
 % Notes settings
@@ -103,12 +103,50 @@
 \maketitle
 %\imageframe{titlepage}
 
+{\fullbackground{europe_map}
+\begin{frame}{Short bio}
+
+    \begin{columns}
+        \begin{column}{0.7\linewidth}
+
+    \begin{itemize}
+        \item \textbf{2008--2012} Joint French (LAAS-CNRS) German (TU
+            Munich) PhD\\
+            \begin{itemize}
+                \item AI \& Cognitive Robotics
+            \end{itemize}
+
+        \item \textbf{2013--2015} Post-doc at EPFL
+            \begin{itemize}
+                \item Child-robot interactions
+            \end{itemize}
+
+        \item \textbf{2015-2018} Post-doc + lecturer at Plymouth University, UK
+            \begin{itemize}
+                \item EU Marie Curie fellowship
+                \item Social Cognition in Robotics
+            \end{itemize}
+
+        \item \textbf{2018--2021} Associate Prof. at Bristol Robotics Lab
+
+        \item \textbf{2021--} ...??!
+
+    \end{itemize}
+
+    \end{column}
+        \begin{column}{0.4\linewidth}
+    \end{column}
+    \end{columns}
+            
+\end{frame}
+}
+
 \imageframe{my_background/00}
 
 
 
 
-\begin{frame}<1-2>[label=soro]{Social Robotics}
+\begin{frame}<1-7>[label=soro]{Social Robotics}
     \centering
 
     \begin{columns}
@@ -127,23 +165,24 @@
                 \vspace{2em}
                 $\Rightarrow$ direct impact on ageing society, education, customer service;
                 \textbf{major socio-economic
-                challenge}; \textbf{UK \& European priority}.
+                challenge}; \textbf{European priority}.
             }
 
             \only<2->{
                 \textbf{Major scientific challenges}:
 
                 \begin{itemize}
-                    \item Model open-ended, underspecified situations; rich
+                    \item<2-> Model open-ended, underspecified situations; rich
                         semantics; complex social dynamics
-                    \item Understand and sustain long-term autonomous social interactions;
-                    \item Real-world algorithmic robustness;
-                    \item Complex ethical landscape;
-                    \item $\Rightarrow$ cross-disciplinary \& holistic approach required
+                    \item<3-> Close the interaction loop
+                    \item<4-> Understand and sustain long-term autonomous social interactions;
+                    \item<5-> Real-world algorithmic robustness;
+                    \item<6-> Complex ethical landscape;
+                    \item<7-> $\Rightarrow$ cross-disciplinary \& holistic approach required
                 \end{itemize}
 
 
-                \uncover<3>{
+                \uncover<8>{
                 \vspace{1em}
 
 
@@ -159,7 +198,7 @@
 
             }
         \end{column}
-        \begin{column}{0.3\linewidth}
+        \begin{column}{0.35\linewidth}
             \begin{center}
                 \includegraphics[trim=15cm 0 11cm 0,clip,width=\linewidth]{ranger/ranger_funny_glasses}
             \end{center}
@@ -231,16 +270,61 @@
 %\end{frame}
 
 \imageframe[scale=0.9]{figs/echos-big-picture}
+\miniframesoff
+\imageframe[scale=0.9]{figs/big-picture-path1}
+\imageframe[scale=0.9]{figs/big-picture-path2}
+\imageframe[scale=0.9]{figs/big-picture-path3}
+\imageframe[scale=0.9]{figs/big-picture-path4}
+\imageframe[scale=0.9]{figs/big-picture-path5}
+\imageframe[scale=0.9]{figs/big-picture-path6}
+\imageframe[scale=0.9]{figs/big-picture-path7}
+\imageframe[scale=0.9]{figs/big-picture-path8}
+\imageframe[scale=0.9]{figs/big-picture-path9}
+\miniframeson
 
-\section{Social situation assessment}
+\section[Social Situations]{from Social situation assessment...}
+
+
+{
+    \paper{Sallami et al. \textbf{Simulation-based physics reasoning for
+    consistent scene estimation in an HRI context} IROS 2019]
+
+    [Lemaignan et al. \textbf{Artificial Cognition for Social Human-Robot
+    Interaction: An Implementation} Artificial Intelligence 2017
+    }
+
+    \begin{frame}{Situation assessment}
+
+        \begin{columns}
+            \begin{column}{0.5\linewidth}
+                    \includegraphics[width=0.8\linewidth]{figs/sit-ass/spark_vert}
+
+            \end{column}
+            \begin{column}{0.5\linewidth}
+                \video[0.56]{\linewidth}{figs/sit-ass/underworlds.mp4?start=20}
+            \end{column}
+        \end{columns}
+
+
+        \badge[caption=Yoan Sallami]{colleagues/yoan}
+    \end{frame}
+}
 
 {
     \paper{Sallami et al. \textbf{The Unexpected Daily Situations Dataset: A New
 Benchmark for Socially-Aware Assistive Robots} HRI LBR 2020}
 
-\begin{frame}{THE UNEXPECTED DAILY SITUATION DATASET}
+\begin{frame}{Common-sense: unexpected situations}
     \begin{center}
-        \includegraphics[width=0.8\linewidth]{uds/mosaic}
+
+        UDS: the Unexpected Daily Situations dataset
+
+
+        \includegraphics[width=0.7\linewidth]{uds/mosaic}
+
+        {\scriptsize (idea borrowed from dev. psychologists Warneken and
+        Tomasello)}
+
     \end{center}
 
     \badge[caption=Yoan Sallami]{colleagues/yoan}
@@ -249,7 +333,24 @@ Benchmark for Socially-Aware Assistive Robots} HRI LBR 2020}
 
 \videoframe[0.56]{figs/uds/uds.mp4}
 
-\videoframe[0.56]{figs/underworlds/underworlds.mp4?start=20}
+{
+
+    \paper{Mohamed, Lemaignan \textbf{ROS for Human-Robot Interaction} Arxiv
+    2021 (under review IROS)}
+
+\begin{frame}{ROS4HRI}
+    \begin{center}
+        \includegraphics[width=\columnwidth]{architectures/ros4hri-pipeline}
+    \end{center}
+    ROS4HRI: first integrated, multi-modal, ROS-based pipeline for social signal
+    processing in robotics
+
+    \badge[caption=Youssef Mohamed]{colleagues/youssef}
+\end{frame}
+}
+
+
+\section[Internal state]{...to internal state...}
 
 {
     \paper{Webb, Mohamed, Lemaignan \textbf{Framing the Challenge of Social
@@ -273,20 +374,6 @@ Benchmark for Socially-Aware Assistive Robots} HRI LBR 2020}
 \end{frame}
 }
 
-{
-    \paper{Mohamed, Lemaignan \textbf{ROS for Human-Robot Interaction} Arxiv
-    2021 (under review IROS)}
-
-\begin{frame}{ROS4HRI}
-    \begin{center}
-        \includegraphics[width=\columnwidth]{architectures/ros4hri-pipeline}
-    \end{center}
-    ROS4HRI: first integrated, multi-modal, ROS-based pipeline for social signal
-    processing in robotics
-
-    \badge[caption=Youssef Mohamed]{colleagues/youssef}
-\end{frame}
-}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -437,11 +524,6 @@ Internal States from the Kinematics [...]} FrontiersIn 2019}
 }
 
 
-
-
-
-\section{Data-driven HRI}
-
 \begin{frame}{Online games \& social datasets}
     \begin{center}
         \includegraphics[width=0.45\linewidth]{figs/online-game/officebots-screenshot-2.png}
@@ -458,23 +540,17 @@ Internal States from the Kinematics [...]} FrontiersIn 2019}
 \end{frame}
 
 
-{
-    \fullbackground[scale=0.9]{sparc/sparc-bg}
-\begin{frame}[plain]
-    \Large
-    Beyond the question of the practical integration of robots into the
-    classroom, how to address \textbf{teachers' acceptance}, and specifically, the \textbf{tension between robot autonomy and teacher
-    control}?
 
-\end{frame}
-}
+
+\section[Social policy learning]{...to in-situ social policy learning}
+
 
 %\imageframe[caption={\textbf{Interactive Reinforcement Learning} to the rescue?}, color=black]{sparc/sophies}
 
 
-\begin{frame}{Autonomous robot, yet teacher in the loop?}
+\begin{frame}{Let set ourselves a challenge}
 
-    One experiment with:
+    Design \& run a study with:
     
     \begin{itemize}
         \item<+-> a real robot
@@ -482,6 +558,7 @@ Internal States from the Kinematics [...]} FrontiersIn 2019}
         \item<+-> a continuous interaction
         \item<+-> a realistic task (large state vector \& action space)
         \item<+-> also including social behaviours \& social dynamics
+        \item<+-> ...and of course, the robot should be autonomous
     \end{itemize}
 
 \end{frame}
@@ -490,7 +567,7 @@ Internal States from the Kinematics [...]} FrontiersIn 2019}
     \paper{Senft et al. \textbf{Teaching robots social autonomy from in situ
     human guidance} Science Robotics 2019}
 
-\begin{frame}{Reinforcement learning applied to social robotics}
+\begin{frame}{IRL applied to social robotics}
 
     \begin{columns}
         \begin{column}{0.5\linewidth}
@@ -513,6 +590,8 @@ Internal States from the Kinematics [...]} FrontiersIn 2019}
     \badge[caption=Emmanuel Senft]{colleagues/emmanuel}
 \end{frame}
 
+\videoframe[0.56]{figs/sparc/video.mp4?noaudio}
+
 \begin{frame}{Teacher's interface}
     \begin{center}
         \includegraphics[width=0.9\linewidth]{sparc/woz-gui}
@@ -525,7 +604,6 @@ Internal States from the Kinematics [...]} FrontiersIn 2019}
     \badge[caption=Emmanuel Senft]{colleagues/emmanuel}
 \end{frame}
 
-\videoframe[0.56]{figs/sparc/video.mp4?noaudio}
 
 %\begin{frame}{Software architecture}
 %    \begin{center}
@@ -542,6 +620,7 @@ Internal States from the Kinematics [...]} FrontiersIn 2019}
     }
     \includegraphics<1>[width=0.9\linewidth]{sparc/actions-supervised}
     \includegraphics<2>[width=0.9\linewidth]{sparc/actions}
+
     \only<1-2>{
         $\rightarrow$ the robot personalises its action policies to the child's
         behaviour.
@@ -553,7 +632,7 @@ Internal States from the Kinematics [...]} FrontiersIn 2019}
 
         \includegraphics[width=0.9\linewidth]{sparc/social-timing}
 
-        $\rightarrow$ the robot has also learnt an appropriate 'social timing'.
+        $\rightarrow$ the robot has also learnt an appropriate social timing.
     }
 
     \badge[caption=Emmanuel Senft]{colleagues/emmanuel}
@@ -609,7 +688,7 @@ Internal States from the Kinematics [...]} FrontiersIn 2019}
                 \item Design of the input state tricky and largely task
                     dependent;
                 \item What about more complex social behaviours?
-                \item Nothing yet on group dynamics
+                \item Would that sustain long-term interactions?
             \end{itemize}
             }
         \end{column}
@@ -621,7 +700,27 @@ Internal States from the Kinematics [...]} FrontiersIn 2019}
 {
     \paper{Winkle et al. \textbf{In-Situ Learning from a Domain Expert for Real World Socially Assistive Robot Deployment} RSS 2020}
 
+\begin{frame}{Co-design for real-world, long-term interaction}
+
+    \begin{center}
+        \begin{tikzpicture}
+            \node at (0,0) {\includegraphics[width=0.6\linewidth]{figs/couch25k/couch25km-mock.jpg}};
+           \node[anchor=north] at (4.5,-0.5) {\includegraphics[trim=0 15cm 0 0,clip,width=0.6\linewidth]{figs/couch25k/codesign.jpg}};
+        \end{tikzpicture}
+
+    \end{center}
+    \badge[caption=Katie Winkle]{colleagues/katie}
+\end{frame}
+}
+
+
+
+{
+    \paper{Winkle et al. \textbf{In-Situ Learning from a Domain Expert for Real World Socially Assistive Robot Deployment} RSS 2020}
+
 \begin{frame}{Expert-in-the-loop machine learning}
+
+    \vspace{0.2cm}
 
     \begin{columns}
         \begin{column}{0.5\linewidth}
@@ -633,6 +732,7 @@ Internal States from the Kinematics [...]} FrontiersIn 2019}
                 \includegraphics[height=3cm]{couch25k/supervised.jpg}
         \end{column}
     \end{columns}
+
         \centering
         \includegraphics[height=4cm]{couch25k/architecture.pdf}
 
@@ -657,19 +757,19 @@ Internal States from the Kinematics [...]} FrontiersIn 2019}
     \paper{Winkle et al. \textbf{In-Situ Learning from a Domain Expert for Real World Socially Assistive Robot Deployment}
     RSS 2020}
     \fullbackground[scale=0.9]{couch25k/finalactiondist.png}
-\begin{frame}{}
+\begin{frame}{Learnt action policy}
 \end{frame}
 }
 {
     \paper{Winkle et al. \textbf{In-Situ Learning from a Domain Expert for Real World Socially Assistive Robot Deployment}
     RSS 2020}
-    \fullbackground[scale=0.9]{couch25k/fullcomp_lbmr.png}
-\begin{frame}{}
+    \fullbackground[scale=0.9]{couch25k/fullcomp_lbmr.pdf}
+\begin{frame}{Learnt to personalise}
 \end{frame}
 }
 
 
-\section{Generating socially-congruent behaviours}
+\section[Generating behaviours]{Generating socially-congruent behaviours}
 
 {
     \paper{Wallbridge et al. \textbf{The Effectiveness of Dynamically Processed
@@ -735,64 +835,10 @@ Internal States from the Kinematics [...]} FrontiersIn 2019}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\againframe<5>{mindmap}
 
 \section{What next?}
 
-\againframe<2-3>{soro}
-
-
-%\begin{frame}[label=researchquestion]{}
-%
-%    \begin{center}
-%
-%    \Large
-%    \bf How to push the state-of-the-art in social robotics?
-%
-%    \end{center}
-%
-%    \begin{itemize}
-%        \item open, underspecified situations; rich semantics
-%            \begin{itemize}
-%                \item $\rightarrow$ better spatio-temporal semantic modeling
-%            \end{itemize}
-%        \item complex social dynamics
-%            \begin{itemize}
-%                \item $\rightarrow$ \textbf{social situation assessment} 
-%            \end{itemize}
-%        \item diversity of tasks; long term, sustained interactions
-%            \begin{itemize}
-%                \item $\rightarrow$ \textbf{goal-driven, non-repetitive
-%                    behaviours}
-%            \end{itemize}
-%    \end{itemize}
-%
-%
-%    \begin{itemize}
-%        \item<2-> social acceptability
-%        \item<2-> responsible AI
-%            \begin{itemize}
-%                \item<2-> $\rightarrow$ \textbf{public-in-the-loop} research
-%                    
-%            \end{itemize}
-%    \end{itemize}
-%
-%
-%
-%\end{frame}
-
-%\imageframe[scale=0.9]{architectures/sense-plan-act}
-%\imageframe[scale=0.9]{architectures/sense-plan-act-2}
-%\imageframe[scale=0.9]{architectures/sense-plan-act-3}
-
-\begin{frame}{}
-    \begin{center}
-        \includegraphics<1>[width=\linewidth]{architectures/sense-plan-act}
-        \includegraphics<2>[width=\linewidth]{architectures/sense-plan-act-2}
-        \includegraphics<3>[width=\linewidth]{architectures/sense-plan-act-3}
-    \end{center}
-\end{frame}
-
+\imageframe[scale=0.9]{figs/echos-big-picture}
 
 %
 %\begin{frame}[plain]
@@ -879,9 +925,12 @@ Internal States from the Kinematics [...]} FrontiersIn 2019}
 %\againframe<4>{wps}
 
 \begin{frame}{KEY SCIENTIFIC CHALLENGES}
+
     \begin{center}
+    We want more real-world, long-term, autonomous interactions!
+
         %        \resizebox{\linewidth}{!}{
-        \includegraphics[width=0.7\linewidth]{architectures/archi.pdf}
+        \includegraphics[width=0.7\linewidth]{architectures/wps.pdf}
         %        \hspace{1em}
         %    \includegraphics[trim=4cm 0 3cm 0,clip,width=0.25\linewidth]{couch25k/hri.jpg}
         %}
@@ -894,6 +943,7 @@ Internal States from the Kinematics [...]} FrontiersIn 2019}
         \item \textbf{generative social behaviours} for robots
         \item \textbf{cognitive architecture} for \textbf{long-term interaction}
     \end{enumerate}
+
 \end{frame}
 
 
@@ -967,7 +1017,12 @@ Internal States from the Kinematics [...]} FrontiersIn 2019}
 \end{frame}
 }
 
-\begin{frame}{Idea: a social-teleological architecture}
+\begin{frame}[plain]
+
+    \begin{center}
+        \Large
+ Cognitive architecture?
+    \end{center}
 
 \end{frame}
 
@@ -986,7 +1041,10 @@ Internal States from the Kinematics [...]} FrontiersIn 2019}
 \imageframe[color=white]{islands4}
 
 
-\begin{frame}{Idea: long-term/short-term policy arbitration}
+\begin{frame}{Idea: socio-teleological architecture}
+
+    \emph{Teleological} $\rightarrow$ \textbf{goal-oriented} architecture
+
     \begin{center}
         \includegraphics[width=0.8\linewidth]{architectures/arbitration}
     \end{center}
