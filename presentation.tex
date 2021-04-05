@@ -173,8 +173,8 @@
 
                 \begin{itemize}
                     \item<2-> Model open-ended, underspecified situations; rich
-                        semantics; complex social dynamics
-                    \item<3-> Close the interaction loop
+                        semantics; complex social dynamics;
+                    \item<3-> Close the interaction loop;
                     \item<4-> Understand and sustain long-term autonomous social interactions;
                     \item<5-> Real-world algorithmic robustness;
                     \item<6-> Complex ethical landscape;
@@ -301,7 +301,7 @@
 
             \end{column}
             \begin{column}{0.5\linewidth}
-                \video[0.56]{\linewidth}{figs/sit-ass/underworlds.mp4?start=20}
+                \video[0.56]{\linewidth}{figs/sit-ass/underworlds.mp4?start=20&autostart}
             \end{column}
         \end{columns}
 
@@ -331,7 +331,7 @@ Benchmark for Socially-Aware Assistive Robots} HRI LBR 2020}
 \end{frame}
 }
 
-\videoframe[0.56]{figs/uds/uds.mp4}
+\videoframe[0.56]{figs/uds/uds.mp4?autostart}
 
 {
 
@@ -416,6 +416,7 @@ Benchmark for Socially-Aware Assistive Robots} HRI LBR 2020}
     \end{column}
 \end{columns}
 
+    \badge[caption=Maddy Bartlett]{colleagues/maddy}
 \end{frame}
 }
 
@@ -531,7 +532,8 @@ Internal States from the Kinematics [...]} FrontiersIn 2019}
     \end{center}
 
     \begin{center}
-        \includegraphics[width=0.6\linewidth]{figs/online-game/graveyard-detective-screenshot.jpg}
+        %\includegraphics[width=0.6\linewidth]{figs/online-game/graveyard-detective-screenshot.jpg}
+        \video[0.56]{0.6\linewidth}{figs/online-game/social-interaction-game.mp4?autostart}
     \end{center}
 
 
@@ -590,7 +592,7 @@ Internal States from the Kinematics [...]} FrontiersIn 2019}
     \badge[caption=Emmanuel Senft]{colleagues/emmanuel}
 \end{frame}
 
-\videoframe[0.56]{figs/sparc/video.mp4?noaudio}
+\videoframe[0.56]{figs/sparc/video.mp4?noaudio&autostart}
 
 \begin{frame}{Teacher's interface}
     \begin{center}
@@ -621,7 +623,7 @@ Internal States from the Kinematics [...]} FrontiersIn 2019}
     \includegraphics<1>[width=0.9\linewidth]{sparc/actions-supervised}
     \includegraphics<2>[width=0.9\linewidth]{sparc/actions}
 
-    \only<1-2>{
+    \only<2>{
         $\rightarrow$ the robot personalises its action policies to the child's
         behaviour.
     }
@@ -756,18 +758,14 @@ Internal States from the Kinematics [...]} FrontiersIn 2019}
 {
     \paper{Winkle et al. \textbf{In-Situ Learning from a Domain Expert for Real World Socially Assistive Robot Deployment}
     RSS 2020}
-    \fullbackground[scale=0.9]{couch25k/finalactiondist.png}
-\begin{frame}{Learnt action policy}
+    \begin{frame}{Learnt policies}
+        \begin{center}
+            \includegraphics<1>[width=\linewidth]{figs/couch25k/finalactiondist-no-autonomous.png}
+            \includegraphics<2>[width=\linewidth]{figs/couch25k/finalactiondist.png}
+            \includegraphics<3>[width=\linewidth]{figs/couch25k/fullcomp_lbmr.pdf}
+        \end{center}
 \end{frame}
 }
-{
-    \paper{Winkle et al. \textbf{In-Situ Learning from a Domain Expert for Real World Socially Assistive Robot Deployment}
-    RSS 2020}
-    \fullbackground[scale=0.9]{couch25k/fullcomp_lbmr.pdf}
-\begin{frame}{Learnt to personalise}
-\end{frame}
-}
-
 
 \section[Generating behaviours]{Generating socially-congruent behaviours}
 
